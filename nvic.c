@@ -7,8 +7,8 @@
  */
 
 #include "NVIC.h"
-#include "pit.h"
 #include "gpio.h"
+#include "MK64F12.h"
 
 // interrucpiones y prioridades //
 void NVIC_enable_interrupt_and_priotity(interrupt_t interrupt_number, priority_level_t priority)

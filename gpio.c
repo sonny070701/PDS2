@@ -151,29 +151,11 @@ void GPIO_init(void)
 	PORT_SetPinConfig(PORTA, sw3_p, &button_config);
 	PORT_SetPinInterruptConfig(PORTA, sw3_p, kPORT_InterruptFallingEdge);
 
-	GPIO_PinInit(GPIOC, time_stopwatch, &gpio_input_config);
-	PORT_SetPinConfig(PORTC, time_stopwatch, &button_config);
-	PORT_SetPinInterruptConfig(PORTC, time_stopwatch, kPORT_InterruptFallingEdge);
+	GPIO_PinInit(GPIOD, 2u, &gpio_input_config);
+	PORT_SetPinConfig(PORTD, 2u, &button_config);
 
-	GPIO_PinInit(GPIOC, time_alarm, &gpio_input_config);
-	PORT_SetPinConfig(PORTC, time_alarm, &button_config);
-	PORT_SetPinInterruptConfig(PORTC, time_alarm, kPORT_InterruptFallingEdge);
-
-	GPIO_PinInit(GPIOB, conf_time, &gpio_input_config);
-	PORT_SetPinConfig(PORTB, conf_time, &button_config);
-	PORT_SetPinInterruptConfig(PORTB, conf_time, kPORT_InterruptFallingEdge);
-
-	GPIO_PinInit(GPIOB, hour_start, &gpio_input_config);
-	PORT_SetPinConfig(PORTB, hour_start, &button_config);
-	PORT_SetPinInterruptConfig(PORTB, hour_start, kPORT_InterruptFallingEdge);
-
-	GPIO_PinInit(GPIOB, min_stop, &gpio_input_config);
-	PORT_SetPinConfig(PORTB, min_stop, &button_config);
-	PORT_SetPinInterruptConfig(PORTB, min_stop, kPORT_InterruptFallingEdge);
-
-	GPIO_PinInit(GPIOB, clear, &gpio_input_config);
-	PORT_SetPinConfig(PORTB, clear, &button_config);
-	PORT_SetPinInterruptConfig(PORTB, clear, kPORT_InterruptFallingEdge);
+	GPIO_PinInit(GPIOD, 0u, &gpio_input_config);
+	PORT_SetPinConfig(PORTD, 0u, &button_config);
 
 	//LEDS
 	PORT_SetPinMux(PORTB, red_p, kPORT_MuxAsGpio);
@@ -184,48 +166,6 @@ void GPIO_init(void)
 
 	PORT_SetPinMux(PORTE, green_p, kPORT_MuxAsGpio);
 	GPIO_PinInit(GPIOE, green_p, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, seg_a, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, seg_a, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, seg_b, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, seg_b, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, seg_c, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, seg_c, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, seg_d, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, seg_d, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, seg_e, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, seg_e, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, seg_f, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, seg_f, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, 6u, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, 6u, &gpio_output_config);
-
-	PORT_SetPinMux(PORTD, seg_g, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOD, seg_g, &gpio_output_config);
-
-	PORT_SetPinMux(PORTC, disp_0, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOC, disp_0, &gpio_output_config);
-
-	PORT_SetPinMux(PORTC, disp_1, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOC, disp_1, &gpio_output_config);
-
-	PORT_SetPinMux(PORTC, disp_2, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOC, disp_2, &gpio_output_config);
-
-	PORT_SetPinMux(PORTC, disp_3, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOC, disp_3, &gpio_output_config);
-
-	PORT_SetPinMux(PORTC, disp_4, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOC, disp_4, &gpio_output_config);
-
-	PORT_SetPinMux(PORTC, disp_5, kPORT_MuxAsGpio);
-	GPIO_PinInit(GPIOC, disp_5, &gpio_output_config);
 
 }
 
